@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Слайдер</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="image1.jpg" alt="Фото 1" />
+        <div class="text">Тоскана, Италия</div>
+      </div>
+      <div class="slide fade">
+        <img src="image2.jpg" alt="Фото 2" />
+        <div class="text">Монастыри Метеоры, Греция</div>
+      </div>
+      <div class="slide fade">
+        <img src="image3.jpg" alt="Фото 3" />
+        <div class="text">Замок Гогенцоллерн, Германия</div>
+      </div>
+
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <div class="dots">
+      <span class="dot" onclick="setSlide(1)"></span>
+      <span class="dot" onclick="setSlide(2)"></span>
+      <span class="dot" onclick="setSlide(3)"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+$mobile: 600px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+.product-card {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: $shadow;
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .product-info {
+    padding: 15px;
+
+    .product-title {
+      color: $text-color;
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+    }
+
+    .product-description {
+      color: lighten($text-color, 20%);
+      margin: 0 0 15px;
+    }
+
+    .product-price {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: $primary-color;
+      margin-bottom: 15px;
+    }
+
+    .add-to-cart {
+      background: $secondary-color;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        background: darken($secondary-color, 10%);
+      }
+    }
+  }
+
+    @include mobile {
+      width: 90%;
+    }
+}
